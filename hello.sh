@@ -3,5 +3,8 @@ echo "User : $(whoami)"
 echo "Hostname : $(hostname)"
 echo "Current Directory : $(pwd)"
 echo "Date : $(date)"
-echo "Update : $(sudo apt-get update -y)"
+echo "Installing Update" 
+sudo apt update -y
+sudo apt install nginx -y
+nginx --version
 echo "Packages updated successfully."
