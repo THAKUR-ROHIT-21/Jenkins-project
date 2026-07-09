@@ -3,4 +3,4 @@ echo "User : $(whoami)"
 echo "Hostname : $(hostname)"
 echo "Current Directory : $(pwd)"
 echo "Date : $(date)"
-echo "update : $(sudo apt update)
+echo "Update : $(sudo apt update -y)
