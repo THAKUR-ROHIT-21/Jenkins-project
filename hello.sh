@@ -6,5 +6,7 @@ echo "Date : $(date)"
 echo "Installing Update" 
 sudo apt update -y
 sudo apt install nginx -y
+sudo apt install docker.io -y
+docker --version
 nginx -v
 echo "Packages updated successfully."
