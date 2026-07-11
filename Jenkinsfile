@@ -47,13 +47,17 @@ pipeline {
 
             mail(
                 to: "r7256870923@gmail.com",
-                subject: "Success",
-                body: "Email working"
+                subject: "Success : Job '${env.JOB_NAME} [$env.BUILD.NUMBER]' ",
+                body: " '${env.JOB_NAME}' Build Succeeded. \n check build URL : '${env.BUILD_URL}' "
             )
         }
 
         failure {
             echo "Pipeline failed ❌"
+            mail(
+                to: "r7256870923@gmail.com",
+                subject: "Success : Job '${env.JOB_NAME} [$env.BUILD.NUMBER]' ",
+                body: " '${env.JOB_NAME}' Build Succeeded. \n check build URL : '${env.BUILD_URL}' "
         }
 
         always {
