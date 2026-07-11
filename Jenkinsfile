@@ -41,8 +41,15 @@ pipeline {
     }
 
     post {
+
         success {
             echo "Pipeline passed successfully ✅"
+
+            mail(
+                to: "r7256870923@gmail.com",
+                subject: "Success",
+                body: "Email working"
+            )
         }
 
         failure {
