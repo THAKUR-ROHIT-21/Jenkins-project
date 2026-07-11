@@ -32,6 +32,12 @@ pipeline {
                 echo "From Delhi ✅"
             }
         }
+
+       stage('Hello manish') {
+            steps {
+                echo "From Bsdk ✅"
+            }
+        }
     }
 }
 
