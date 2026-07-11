@@ -47,17 +47,33 @@ pipeline {
 
             mail(
                 to: "r7256870923@gmail.com",
-                subject: "Success : Job '${env.JOB_NAME} [$env.BUILD.NUMBER]' ",
-                body: " '${env.JOB_NAME}' Build Succeeded. \n check build URL : '${env.BUILD_URL}' "
+                subject: "Success : Job '${env.JOB_NAME} #${env.BUILD_NUMBER}'",
+                body: """
+'${env.JOB_NAME}' Build Succeeded ✅
+
+Build Number : ${env.BUILD_NUMBER}
+
+Check Build URL:
+${env.BUILD_URL}
+"""
             )
         }
 
         failure {
             echo "Pipeline failed ❌"
+
             mail(
                 to: "r7256870923@gmail.com",
-                subject: "Success : Job '${env.JOB_NAME} [$env.BUILD.NUMBER]' ",
-                body: " '${env.JOB_NAME}' Build Succeeded. \n check build URL : '${env.BUILD_URL}' "
+                subject: "Failed : Job '${env.JOB_NAME} #${env.BUILD_NUMBER}'",
+                body: """
+'${env.JOB_NAME}' Build Failed ❌
+
+Build Number : ${env.BUILD_NUMBER}
+
+Check Build URL:
+${env.BUILD_URL}
+"""
+            )
         }
 
         always {
