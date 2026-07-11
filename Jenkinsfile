@@ -33,17 +33,24 @@ pipeline {
             }
         }
 
-       stage('Hello manish') {
+        stage('Hello Manish') {
             steps {
                 echo "😂😂😂😂😂😂 ✅"
             }
         }
     }
-}
-post{
-    success{
-        echo "pipeline pass ✅" 
-        echo "pipeline fail ❌"
- }
-}
 
+    post {
+        success {
+            echo "Pipeline passed successfully ✅"
+        }
+
+        failure {
+            echo "Pipeline failed ❌"
+        }
+
+        always {
+            echo "Pipeline execution completed 🔔"
+        }
+    }
+}
