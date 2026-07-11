@@ -35,7 +35,7 @@ pipeline {
 
        stage('Hello manish') {
             steps {
-                echo "From Bsdk ✅"
+                echo "😂😂😂😂😂😂 ✅"
             }
         }
     }
