@@ -46,7 +46,7 @@ pipeline {
             echo "Pipeline passed successfully ✅"
 
             mail(
-                to: "r7256870923@gmail.com",
+                to: "thakurrohitkr591@gmail.com",
                 subject: "Success : Job '${env.JOB_NAME} #${env.BUILD_NUMBER}'",
                 body: """
 '${env.JOB_NAME}' Build Succeeded ✅
@@ -63,7 +63,7 @@ ${env.BUILD_URL}
             echo "Pipeline failed ❌"
 
             mail(
-                to: "r7256870923@gmail.com",
+                to: "thakurrohitkr591@gmail.com",
                 subject: "Failed : Job '${env.JOB_NAME} #${env.BUILD_NUMBER}'",
                 body: """
 '${env.JOB_NAME}' Build Failed ❌
