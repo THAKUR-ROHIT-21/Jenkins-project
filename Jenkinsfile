@@ -40,4 +40,10 @@ pipeline {
         }
     }
 }
+post{
+    success{
+        echo "pipeline pass ✅" 
+        echo "pipeline fail ❌"
+ }
+}
 
