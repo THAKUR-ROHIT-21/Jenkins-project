@@ -2,15 +2,34 @@ pipeline {
     agent { label 'electronic' }
 
     stages {
+
         stage('Hello') {
             steps {
                 echo "Hello ✅"
             }
         }
 
-        stage('World') {
+        stage('Rohit') {
             steps {
-                echo "Hello ✅"
+                echo "Rohit ✅"
+            }
+        }
+
+        stage('Kumar') {
+            steps {
+                echo "Kumar ✅"
+            }
+        }
+
+        stage('Thakur') {
+            steps {
+                echo "Thakur ✅"
+            }
+        }
+
+        stage('Location') {
+            steps {
+                echo "From Delhi ✅"
             }
         }
     }
